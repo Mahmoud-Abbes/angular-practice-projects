@@ -1,0 +1,28 @@
+<div class="main-content">
+  <div class="todo-conatiner">
+    <h2>To-Do List</h2>
+
+    <input type="text" [(ngModel)]="newTask" (keyup.enter)="addTask()" />
+    <p *ngIf="isWarning" class="warning-message">Please enter a valid task</p>
+    <button (click)="addTask()" class="add-btn">Add Task</button>
+
+    <div *ngFor="let task of tasks; let i = index" class="task-list">
+      <div class="task-item">
+        <p>
+          {{
+            tasks[i].length < 24
+              ? tasks[i]
+              : tasks[i].slice(24, 25) !== ' '
+                ? tasks[i].slice(0, 25) + '...'
+                : tasks[i].slice(0, 24) + '...'
+          }}
+        </p>
+        <button (click)="deleteTask(i)" class="delete-btn">delete</button>
+      </div>
+    </div>
+
+    <div *ngIf="tasks.length === 0" class="no-tasks-container">
+      <p>No tasks available. Add a new task!</p>
+    </div>
+  </div>
+</div>
