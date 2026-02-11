@@ -1,14 +1,14 @@
 import { Component, signal } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
-  imports: [],
+  imports: [FormsModule],
   templateUrl: './app.html',
   styleUrl: './app.scss',
 })
 export class App {
-  name: string = 'Lorem';
-  age: number | null = 22;
-  description: string =
-    'Duis ex reprehenderit ea deserunt Ut laboris minim pariatur Lorem et excepteur ullamco eu aliquip eiusmod proident eu dolore.';
+  name: string = '';
+  age: number | null = null;
+  description: string = ""
 }
