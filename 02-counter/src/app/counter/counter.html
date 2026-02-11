@@ -5,5 +5,10 @@
       <button (click)="increment()">Increment</button>
       <button (click)="decrement()">Decrement</button>
     </div>
+    <div [ngSwitch]="getCounterStatus()">
+      <p *ngSwitchCase="'positive'" [ngClass]="'positive'">The counter is positive</p>
+      <p *ngSwitchCase="'negative'" [ngClass]="'negative'">The counter is negative</p>
+      <p *ngSwitchCase="'neutral'" [ngClass]="'neutral'">The counter is neutral</p>
+    </div>
   </div>
 </div>
