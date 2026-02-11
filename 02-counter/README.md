@@ -1,9 +1,12 @@
 # Counter App
 
-Small Angular project to practice event binding and handling user interactions.
+Small Angular project to practice event binding and dynamic template updates.
 
 ## Learned
 
-- Binding methods to the template
+- Creating methods and calling variables
 - Handling click events
-- Updating component state
+- Using return values and conditions
+- Template switch-case
+- Dynamic styling with ngStyle
+- Dynamic classes with ngClass
