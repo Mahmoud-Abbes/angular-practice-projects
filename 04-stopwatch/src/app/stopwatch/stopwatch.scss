@@ -1,0 +1,30 @@
+.main-content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.stopwatch-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    margin-right: 100px;
+    text-align: center;
+}
+
+.control-buttons{
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+button{
+    padding: 15px 30px;
+    cursor: pointer;
+}
+
+p{
+    font-size: 25px;
+    margin: -5px 0px 15px 0px;
+}
