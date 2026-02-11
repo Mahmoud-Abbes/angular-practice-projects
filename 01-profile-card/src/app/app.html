@@ -10,7 +10,7 @@
     <p><strong>Update profile</strong></p>
     <div class="input-fields">
       <input type="text" class="input-field" [(ngModel)]="name" placeholder="Enter new name"/>
-      <input type="number" class="input-field" [(ngModel)]="age" placeholder="Enter new age"/>
+      <input type="number" min="1" class="input-field" [(ngModel)]="age" placeholder="Enter new age"/>
       <textarea class="input-field" [(ngModel)]="description" placeholder="Enter new description"></textarea>
     </div>
   </div>
