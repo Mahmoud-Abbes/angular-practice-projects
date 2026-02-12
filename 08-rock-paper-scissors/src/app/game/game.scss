@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+.main-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: 'Google Sans';
+  color: #660032;
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  background-color: #e5e6fa;
+  padding: 20px 40px;
+  border-radius: 5px;
+  border: 2px solid #660032;
+}
+
+.choices {
+  display: flex;
+  gap: 10px;
+}
+
+.choice {
+  height: 80px;
+  width: 80px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  border: 2px solid #660032;
+  margin-bottom: 20px;
+  background-color: white;
+  transition: 0.2s ease;
+  cursor: pointer;
+}
+
+.choice:hover {
+  background-color: rgb(243, 243, 243);
+}
+
+.choice img {
+  height: 40px;
+  width: 40px;
+}
+
+h2 {
+  margin-bottom: 0px;
+  font-size: 30px;
+  margin-top: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #660032;
+  color: white;
+  font-family: 'Google Sans';
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:disabled {
+  background-color: rgb(160, 160, 160);
+  cursor: not-allowed;
+}
+
+.choose-text {
+  font-size: 17px;
+  margin-top: 10px;
+}
+
+.choice-image-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+.game-result {
+  margin-top: -10px;
+}
+
+.contestants-score{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.contestants-score div{
+    border:  2px solid #660032;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 10px;
+    border-radius: 5px;
+}

@@ -1,0 +1,26 @@
+<div class="main-container">
+  <div class="game-container">
+    <h2>Rock Paper Scissors</h2>
+    
+    <div class="contestants-score">
+      <div class="player-score"><p>player: {{playerScore}} </p></div>
+      <div class="computer-score"><p>computer: {{computerScore}} </p></div>
+    </div>
+    <p class="choose-text">Chose your weapon!</p>
+
+    <div class="choices">
+      <div class="choice" *ngFor="let choice of choices; let i = index">
+        <div class="choice-image-container" (click)="makePlayerChoice(i)">
+          <img [src]="choice.toLocaleLowerCase() + '.png'" [alt]="" />
+        </div>
+      </div>
+    </div>
+
+    <div *ngIf="isGameOver" class="game-result">
+      <p>Computer chosen {{ computerChoice }}</p>
+      <p>{{ gameResult }}</p>
+    </div>
+
+    <button (click)="restartGame()" [disabled]="!isGameOver">Play Again</button>
+  </div>
+</div>
