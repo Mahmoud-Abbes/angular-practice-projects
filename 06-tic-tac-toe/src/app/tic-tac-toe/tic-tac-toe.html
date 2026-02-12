@@ -1,0 +1,19 @@
+<div class="main-content">
+  <div class="game-container">
+    <h1>Tic Tac Toe</h1>
+    <p>Player {{ currentPlayer }}'s turn.</p>
+
+    <div class="cell-elements">
+      <div *ngFor="let cell of board; let i = index">
+        <div (click)="makeMove(i)" class="cell-element">{{ cell }}</div>
+      </div>
+    </div>
+
+    <div *ngIf="isGameOver" class="game-status-messages">
+      <p *ngIf="isWinner" class="win-message">Player {{ currentPlayer }} Won !</p>
+      <p *ngIf="!isWinner" class="draw-message">Its a draw!</p>
+    </div>
+
+    <button (click)="resetGame()" class="reset-btn">Reset Game</button>
+  </div>
+</div>
