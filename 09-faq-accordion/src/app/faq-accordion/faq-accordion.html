@@ -1,0 +1,17 @@
+<div class="main-content">
+  <div class="faq-container">
+    <div *ngFor="let faq of faqs; let i = index">
+      <div class="faq" (click)="openCloseFaq(i)">
+        <div class="quention-container">
+          <p class="question">{{ faq.question }}</p>
+          <img
+            [style]="checkFaqOpen(i) ? 'transform: rotate(180deg);' : ''"
+            src="chevron-down.svg"
+            alt=""
+          />
+        </div>
+        <p class="answer" *ngIf="checkFaqOpen(i)" [@slideToggle]>{{ faq.answer }}</p>
+      </div>
+    </div>
+  </div>
+</div>

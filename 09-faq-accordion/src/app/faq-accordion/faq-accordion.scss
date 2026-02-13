@@ -1,0 +1,51 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+.main-content{
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    font-family: 'Google Sans';
+}
+
+.faq-container{
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.faq{
+    padding: 10px 10px;
+    border: 1px solid #ededed;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    background-color: rgb(254, 254, 254);
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.faq:hover{
+    background-color: #f9f9f9;
+}
+
+.quention-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.quention-container img{
+    height: 20px;
+}
+
+.question{
+    font-weight: 700;
+    margin: 0px;
+}
+
+.answer{
+    color: #515051;
+    margin-top: 10px;
+    margin-bottom: 0px;
+}
