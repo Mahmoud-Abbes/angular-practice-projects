@@ -1,0 +1,15 @@
+<div class="main-content">
+  <div class="joke-container">
+    <h2>Random Joke Generator</h2>
+    <button (click)="fetchJoke()">Create Random Joke</button>
+
+    <p class="report-message loading-message" *ngIf="isLoading">Loading...</p>
+
+    <div class="joke-content" *ngIf="!isLoading && jokeSetup && jokePunchLine">
+      <p><strong>Joke Setup: </strong> {{ jokeSetup }}</p>
+      <p><strong>Joke punch line: </strong> {{ jokePunchLine }}</p>
+    </div>
+
+    <p class="report-message error-message" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+</div>

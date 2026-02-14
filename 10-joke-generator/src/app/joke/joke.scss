@@ -1,0 +1,54 @@
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&display=swap');
+
+.main-content{
+    font-family: 'Google Sans';
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    text-align: center;
+    background-color: #646464;
+    height: 100%;
+}
+
+.joke-container{
+    background-color: #15161a;
+    color: #f0f0f0;
+    padding: 20px 30px 10px 30px;
+    border-radius: 5px;
+    margin-top: 20px;
+    width: 30%;
+    min-height: 28%;
+    border: 1px solid rgb(201, 201, 201);
+}
+
+.joke-content{
+    text-align: left;
+    margin-top: 30px;
+}
+
+button{
+    padding: 13px 20px;
+    border: none;
+    background-color: #fab22e;
+    border-radius: 5px;
+    color: black;
+    font-weight: 700;
+}
+
+.report-message{
+    margin-top: 40px;
+    font-size: 18px;
+}
+
+.error-message{
+    color: rgb(229, 79, 79);
+}
+
+.loading-message{
+    color: rgb(207, 207, 246);
+}
+
+h2{
+    margin-bottom: 30px;
+}
