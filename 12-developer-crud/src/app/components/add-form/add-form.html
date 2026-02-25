@@ -1,0 +1,25 @@
+<div class="add-form-container">
+  <div class="add-form-content">
+    <div class="add-form-header">
+      <h2>Add Software engineer</h2>
+      <img src="close-btn.png" (click)="closeForm()" alt="" class="close-btn" />
+    </div>
+
+    <label
+      ><p>Name</p>
+      <input type="text" [(ngModel)]="newSoftwareEngineer.name" required />
+    </label>
+    <label
+      ><p>Tech stack</p>
+      <input type="text" [(ngModel)]="newSoftwareEngineer.techStack" required />
+    </label>
+
+    @if (errorMessage) {
+        <p class="error-message"> {{errorMessage}} </p>
+    }
+
+    <div class="save-btn-container">
+      <button type="submit" class="save-btn" [disabled]="isSaving" (click)="save()"> {{saveText}} </button>
+    </div>
+  </div>
+</div>

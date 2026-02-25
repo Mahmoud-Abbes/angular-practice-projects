@@ -1,0 +1,19 @@
+<app-header
+ (toggleAdd)="toggleAddingMode()"
+ [isAddEnabled]="isAddEnabled()"
+></app-header>
+
+@if (isAdding || isEdeting) {
+  @if (isEdeting && editedEngineer) {
+    <app-edit-form [editEngineer]="editedEngineer" (close)="closeEditForm()"></app-edit-form>
+  } @else {
+    <app-add-form (toggleAdd)="toggleAddingMode()"></app-add-form>
+  }
+} @else {
+  <app-engineer-list
+    (toggleEdit)="toggleEditMode()"
+    (setEditEngineer)="setEditedEngineer($event)"
+  ></app-engineer-list>
+}
+
+<app-footer></app-footer>

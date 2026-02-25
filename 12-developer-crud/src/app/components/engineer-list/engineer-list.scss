@@ -1,0 +1,12 @@
+.engineer-list{
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.engineer-cards{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    width: 83%;
+}

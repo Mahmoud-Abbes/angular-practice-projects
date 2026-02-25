@@ -1,0 +1,19 @@
+<div class="engineer-list">
+  <p *ngIf="engineerList.length == 0 && !isLoading && !errorMessage">No engineers yet</p>
+  <p *ngIf="errorMessage">Error: {{ errorMessage }}</p>
+
+  <p *ngIf="isLoading">Loading...</p>
+
+  <div class="engineer-cards">
+    <div *ngFor="let engineer of engineerList; let i = index">
+      <app-engineer-card
+        [id]="engineer.id"
+        [name]="engineer.name"
+        [techStack]="engineer.techStack"
+        (toggleEdit)="toggleEditMode()"
+        (setEditedEngineer)="setEditedEngineer($event)"
+        (fetchEngineers)="fetchEngineers()"
+      ></app-engineer-card>
+    </div>
+  </div>
+</div>

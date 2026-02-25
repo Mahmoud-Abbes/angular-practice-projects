@@ -1,0 +1,37 @@
+<div class="edit-form-container">
+  <div class="edit-form-content">
+    <div class="edit-form-header">
+      <h2>Edit Software engineer</h2>
+      <img src="close-btn.png" alt="" class="close-btn" (click)="closeForm()" />
+    </div>
+
+    <label
+      ><p>Id</p>
+      <input type="text" [value]="editEngineer.id" disabled />
+    </label>
+
+    <label
+      ><p>Name</p>
+      <input type="text" [(ngModel)]="editEngineer.name" [value]="editEngineer.name" required />
+    </label>
+    <label
+      ><p>Tech stack</p>
+      <input
+        type="text"
+        [(ngModel)]="editEngineer.techStack"
+        [value]="editEngineer.techStack"
+        required
+      />
+    </label>
+
+    @if (errorMessage) {
+        <p class="error-message"> {{errorMessage}} </p>
+    }
+    
+    <div class="save-btn-container">
+      <button type="submit" class="save-btn" [disabled]="isSaving" (click)="save()">
+        {{ saveText }}
+      </button>
+    </div>
+  </div>
+</div>

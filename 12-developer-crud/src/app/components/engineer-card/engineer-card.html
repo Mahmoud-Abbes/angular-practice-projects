@@ -1,0 +1,13 @@
+<div class="engineer-card">
+  <img src="profile-empty.png" alt="profile-image" />
+  <div class="id">{{ '#' + id }}</div>
+  <div class="card-content">
+    <p class="name">{{ name }}</p>
+    <p class="techStrack">{{ techStack }}</p>
+
+    <div class="controls">
+      <button class="edit-btn" (click)="toggleEditMode()">Edit</button>
+      <button class="delete-btn" (click)="deleteEngineer()" [disabled]="deleteDisabled" > {{deleteText}} </button>
+    </div>
+  </div>
+</div>
